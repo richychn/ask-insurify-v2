@@ -16,6 +16,7 @@ embedding_endpoint = "https://api-inference.huggingface.co/pipeline/feature-extr
 llm_endpoint = "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta"
 
 # Create Streamlit UI
+st.set_page_config(page_title='Ask Insurify')
 st.title("Ask Insurify About Car Insurance")
 question = st.text_input("Question: ", "")
 query_button = st.button("Get Answers")
