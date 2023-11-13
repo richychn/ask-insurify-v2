@@ -19,10 +19,11 @@ class Query:
         self.pinecone_index = pinecone.Index("sitemap")
         self.vector_store = PineconeVectorStore(pinecone_index=self.pinecone_index)
 
-        self.context_nodes = self._get_nodes()
-
         self.context = None
         self.prompt = None
+        self.sources = []
+
+        self.context_nodes = self._get_nodes()
 
     def _get_nodes(self):
         # Get context information relevant to the question
@@ -39,6 +40,8 @@ class Query:
             if query_result.similarities is not None:
                 score = query_result.similarities[index]
             nodes_with_scores.append(NodeWithScore(node=node, score=score))
+            self.sources.append(node.metadata['Source'])
+        self.sources = list(set(self.sources))
         return nodes_with_scores
 
     def get_prompt(self):
