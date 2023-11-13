@@ -1,8 +1,8 @@
 # Ask Insurify
 
-This is a [Streamlit app](https://ask-insurify.streamlit.app) that allows users to ask questions about car insurance. The responses are based on information found at Insurify.com. I used a mix of HuggingFace Inference APIs and LlamaIndex logic to provide answers to car insurance questions.
+[Ask Insurify](https://ask-insurify.streamlit.app) answers car insurance questions using [Insurify](https://insurify.com)'s published online articles. The responses are powered by the Zephyr-7B-Alpha Large Language Model. 
 
-Disclaimer: I am an employee of Insurify, but this app is not associated with Insurify. All information provided on this app is generated from published information, but may not be supported by insurance agents at Insurify.
+Disclaimer: I am an employee of Insurify, but this app is not associated with Insurify. All information provided on this app is generated from public information on Insurify's website, but I cannot guarantee any AI generated responses are supported by Insurify agents.
 
 # Resources
 
