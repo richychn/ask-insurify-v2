@@ -22,7 +22,7 @@ st.header("Ask Insurify About Car Insurance")
 question = st.text_input("Get your car insurance questions answered by an AI using Insurify's articles.", "")
 query_button = st.button("Get Answers")
 
-if query_button:
+if query_button or question != "":
     with st.spinner('Querying...'):
         embedding_payload = {
             "inputs": [question],
